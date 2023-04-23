@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {HelloWorldComponent} from "./hello-world/hello_world.component";
 import {AppComponent} from "./app.component";
@@ -8,7 +8,6 @@ import {ConfigClientComponent} from "./client-configuration/config-client.compon
 import {MenuComponent} from "./menu/menu.component";
 import {MatButtonModule} from "@angular/material/button";
 import {MatMenuModule} from "@angular/material/menu";
-
 
 @NgModule({
   declarations: [
@@ -23,12 +22,20 @@ import {MatMenuModule} from "@angular/material/menu";
     MatMenuModule,
     MatButtonModule
   ],
+  exports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule
+
+  ],
   providers: [],
   bootstrap: [
     AppComponent,
     HelloWorldComponent,
     ConfigClientComponent,
-    MenuComponent]
+    MenuComponent
+  ]
 })
 export class AppModule {
 }
