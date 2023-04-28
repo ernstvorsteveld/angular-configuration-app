@@ -1,10 +1,10 @@
-#container {
+.container {
   height: 100%;
   width:25%;
-  border:dashed;
+  /*border:dashed;*/
 }
 
-#menu-item {
-  width:100%;
-  border:solid;
+.button {
+  width:40%;
+  /*border:solid;*/
 }

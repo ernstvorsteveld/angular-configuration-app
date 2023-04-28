@@ -1,13 +1,15 @@
-import { TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import {TestBed} from '@angular/core/testing';
+import {AppComponent} from './app.component';
 import {HelloWorldComponent} from "./hello-world/hello_world.component";
 import {ConfigClientComponent} from "./client-configuration/config-client.component";
 import {MenuComponent} from "./menu/menu.component";
 import {MatMenu} from "@angular/material/menu";
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [
         AppComponent, HelloWorldComponent, ConfigClientComponent, MenuComponent, MatMenu
       ],
