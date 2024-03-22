@@ -1,16 +1,23 @@
 <div id="container">
   <button mat-button routerLink="/home" routerLinkActive="active">Home</button>
-  <button mat-button [matMenuTriggerFor]="menu1">Configuration</button>
-  <button mat-button [matMenuTriggerFor]="menu2">List</button>
+  <button mat-button [matMenuTriggerFor]="configuration">Configuration</button>
+  <button mat-button [matMenuTriggerFor]="list">List</button>
 </div>
 
-<mat-menu #menu1="matMenu">
-  <button mat-menu-item routerLink="/client-configuration" routerLinkActive="active">Client Configuration</button>
+<mat-menu #configuration="matMenu">
+  <button mat-menu-item routerLink="/oauth-client-list-tiles" routerLinkActive="active">Oauth Clients as tiles</button>
+  <button mat-menu-item routerLink="/oauth-client-list-table" routerLinkActive="active">Oauth Clients as table</button>
+  <button mat-menu-item routerLink="/oauth-client-new" routerLinkActive="active">New Oauth Client</button>
   <button mat-menu-item routerLink="/hello-world" routerLinkActive="active">Menu Item 12</button>
 </mat-menu>
 
-<mat-menu #menu2="matMenu">
+<mat-menu #list="matMenu">
   <button mat-menu-item>Menu Item 21</button>
   <button mat-menu-item>Menu Item 22</button>
 </mat-menu>
 
+<!--<div class="container">-->
+<!--  <div class="button-container" *ngFor="let item of mainMenuItems">-->
+<!--    <button mat-button routerLink="{{item.path}}" routerLinkActive="active">{{item.text}}</button>-->
+<!--  </div>-->
+<!--</div>-->

@@ -7,7 +7,7 @@ import {ChildrenOutletContexts} from "@angular/router";
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'Examples';
+  title = 'The ZZP Helper Application';
 
   constructor(private contexts: ChildrenOutletContexts) {
   }
